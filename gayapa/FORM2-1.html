@@ -1,0 +1,163 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Basic Student Enrollment Form</title>
+  <style>
+    .power-ranger-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzXUtFBRe7Cp99LKo081S9ziT1CIiDbnlYbH1Wc-ra_dXJPs4JxQuLjj3WNjfmYh9Cvh8&usqp=CAU');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-attachment: fixed;
+    }
+   
+    .form-container {
+      width: 6in;      /* Letter size width */
+      min-height: 10in;  /* Letter size height */
+      margin: auto;
+      background: #a785e3;
+      padding: 40px;
+      border: 1px solid #000;
+      box-sizing: border-box;
+    }
+
+    h2 {
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+
+    .row {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: inline-block;
+      width: 200px;
+      font-weight: bold;
+    }
+
+    input, select {
+      width: 300px;
+      padding: 5px;
+    }
+
+    .submit-btn {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .submit-btn input {
+      background: #007BFF;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .submit-btn input:hover {
+      background: #0056b3;
+    }
+
+    /* Print style */
+    @media print {
+      body {
+        background: none;
+        margin: 0;
+      }
+      .form-container {
+        border: none;
+        padding: 0;
+      }
+      .submit-btn { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Power Rangers Enrollment Form</h2>
+
+    <form>
+      <div class="row">
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" required>
+      </div>
+
+      <div class="row">
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+      </div>
+
+      <div class="row">
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+          <option value="">--Select--</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="gay">Gay</option>
+          <option value="lesbian">Lesbian</option>
+          <option value="furry">Furry</option>
+          <option value="femboy">Femboy</option>
+          <option value="black">Black</option>
+        </select>
+      </div>
+
+      <div class="row">
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address">
+      </div>
+
+      <div class="row">
+        <label for="year">WHAT COLOR YOU WANT TO BE?:</label>
+        <select id="year" name="year">
+          <option value="">--Select--</option>
+          <option value="1">RED</option>
+          <option value="2">BLUE</option>
+          <option value="3">PINK</option>
+          <option value="4">YELLOW</option>
+          <option value="5">GREEN</option>
+          <option value="6">BLACK</option>
+        </select>
+        <div>
+          <div class="power-ranger-row">
+            <span>YOU WANT TO BE A MEMBER OF THE POWER RANGERS?</span>
+            <input type="radio" name="power_ranger" value="male" id="pr-yes">
+            <label for="pr-yes">YES</label>
+            <input type="radio" name="power_ranger" value="Gay" id="pr-no">
+            <label for="pr-no">NO</label>
+          </div>
+      </div>
+      1X1 PICTURE
+<input type="file" name="myFile">
+        </form>
+      </div>
+      WHO YOU WANT TO SAVE:
+  <div><input type="checkbox" name="hobby" value="people"> PEOPLE
+  <input type="checkbox" name="hobby" value="goth latina"> GOTH LATINA
+  <input type="checkbox" name="hobby" value="hello kitty femboy"> HELLO KITTY FEMBOY
+   <input type="checkbox" name="hobby" value="indian"> INDIAN<br><br></div>
+     <div>Message Us:<br>
+  <textarea name="message" rows="4" cols="30"></textarea><br><br>
+      <div class="submit-btn">
+        <input type="submit" value="Submit">
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>
